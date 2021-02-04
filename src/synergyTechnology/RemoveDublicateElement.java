@@ -28,12 +28,14 @@ public class RemoveDublicateElement {
 
 	public static void main(String[] args) {
 
+		String output = "";
+
 		System.out.println("Result of First Array");
-		int aray1[] = { 2, 2, 2, 2, 2, 3 };
+		int aray1[] = { 2, 2, 2, 2, 2 };
 		int arrayLength1 = remove_duplicates(aray1, aray1.length);
 
 		for (int i = 0; i < arrayLength1; i++) {
-			System.out.println(aray1[i] + "");
+			System.out.println("{" + aray1[i] + "}");
 		}
 
 		System.out.println("Result of Second Array");
@@ -41,7 +43,10 @@ public class RemoveDublicateElement {
 		int arrayLength2 = remove_duplicates(aray2, aray2.length);
 
 		for (int i = 0; i < arrayLength2; i++) {
-			System.out.println(aray2[i] + "");
+			// System.out.print("{" + aray2[i] + "}");
+			int j = aray2[i];
+			output = output + String.valueOf(j) + ",";
 		}
+		System.out.println("{" + output.substring(0, 9) + "}");
 	}
 }
