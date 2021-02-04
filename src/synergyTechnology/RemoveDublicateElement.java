@@ -1,12 +1,14 @@
 package synergyTechnology;
 
+import java.util.Arrays;
+
 public class RemoveDublicateElement {
 
 	public static int remove_duplicates(int arrayInput[], int arrayLength) {
 		if (arrayLength == 0 || arrayLength == 1) {
 			return arrayLength;
 		}
-
+		Arrays.sort(arrayInput);
 		int originalElement[] = new int[arrayLength];
 		int j = 0;
 		for (int i = 0; i < arrayLength - 1; i++) {
@@ -39,14 +41,30 @@ public class RemoveDublicateElement {
 		}
 
 		System.out.println("Result of Second Array");
-		int aray2[] = { 1, 2, 2, 3, 4, 4, 4, 5, 5 };
+		int aray2[] = { 1, 2, 3, 4, 4, 4, 5, 5 };
 		int arrayLength2 = remove_duplicates(aray2, aray2.length);
 
 		for (int i = 0; i < arrayLength2; i++) {
 			// System.out.print("{" + aray2[i] + "}");
 			int j = aray2[i];
 			output = output + String.valueOf(j) + ",";
+
 		}
-		System.out.println("{" + output.substring(0, 9) + "}");
+
+		System.out.println("{" + output.substring(0, output.length() - 1) + "}");
+		output = "";
+
+		System.out.println("Result of third  Array");
+		int aray3[] = { 1, 2, 5, 3, 4, 4, 2, 5, 5 };
+		int arrayLength3 = remove_duplicates(aray3, aray3.length);
+
+		for (int i = 0; i < arrayLength3; i++) {
+			// System.out.print("{" + aray2[i] + "}");
+			int k = aray3[i];
+			output = output + String.valueOf(k) + ",";
+
+		}
+
+		System.out.println("{" + output.substring(0, output.length() - 1) + "}");
 	}
 }
