@@ -12,10 +12,10 @@ public class IntegerSequenceFunction {
 			 
 			value=""+value+inputArray[i];
 			//System.out.println(value);
-			if(i>2)
+			if(i>=2)
 			{
 				    String substringValue = value.substring(i-2, i+1);
-				   // System.out.println(substring);
+				   // System.out.println(substringValue);
 				    if(substringValue.equals("123"))
 				    {
 				    	
@@ -44,7 +44,9 @@ public class IntegerSequenceFunction {
 		    int array3[]= {1,1,2,1,2,3};
 			boolean resutl3 = array123(array3);
 			System.out.println(resutl3);
-		
+			
+			
+			 
 		 
 	}
 

@@ -36,7 +36,7 @@ public class RemoveDublicateElement {
 		
 		
 		System.out.println("Result of First Array");
-		int aray1[]= {2,2,2,2,2};
+		int aray1[]= {2,2,2,2,2,3};
 		int arrayLength1 = remove_duplicates(aray1,aray1.length);
 		
 		for(int i=0;i<arrayLength1;i++)
